@@ -47,7 +47,11 @@ Shells like bash and zsh need help to do this though, they have to know what the
 
     If you installed zsh with Homebrew, DDEV’s completions will be automatically installed when you `brew install drud/ddev/ddev`.
     
+    For this to work, you may need to install and configure zsh-completions first (`brew install zsh-completions`).
+    
     Otherwise, Oh-My-Zsh may be set up very differently in different places, so as a power `zsh` user you’ll need to put `ddev_bash_completion.sh` (see tar archive download above) where it belongs. `echo $fpath` will show you the places that it’s most likely to belong. An obvious choice is `~/.oh-my-zsh/completions`; if that exists, so you can run `mkdir -p ~/.oh-my-zsh/completions && cp ddev_zsh_completion.sh ~/.oh-my-zsh/completions/_ddev`, then `autoload -Uz compinit && compinit`.
+    
+    For some users, the equivalent of the ddev_zsh_completion.sh file can be found at `/opt/homebrew/Cellar/ddev/[version number]/share/zsh/site-functions/ddev`. You can copy this file and place it in the `~/.oh-my-zsh/completions/_ddev` file, as described above.
 
 === "Fish"
 
